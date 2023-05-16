@@ -9,7 +9,7 @@ def main():
    
     @st.cache_resource
     def load_model():
-        model = tf.keras.models.load_model('test_tube_classifier.hdf5')
+        model = tf.keras.models.load_model('final_model.h5')
         return model
     
     def import_and_predict(image_data, model):
@@ -22,9 +22,9 @@ def main():
         return prediction
 
     model = load_model()
-    class_names =  ["High", "Moderate", "No reducing sugar", "Traceable"]
+    class_names =  ["T-shirt/top", "Trouser/pants", "Pullover shirt", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
 
-    st.write("# Glucose Level (Benedict Solution) Classifier")
+    st.write("# Fashion-Mnist Classifier")
    
     file = st.file_uploader("Choose photo from computer", type=["jpg", "png", "jpeg"])
 
