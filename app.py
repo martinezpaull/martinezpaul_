@@ -13,7 +13,7 @@ def main():
         return model
     
     def import_and_predict(image_data, model):
-        size=(128,128)
+        size=(28,28)
         image = ImageOps.fit(image_data,size, Image.LANCZOS)
         image = np.asarray(image)
         image = image / 255.0
