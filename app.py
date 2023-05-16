@@ -17,7 +17,7 @@ def main():
         image = ImageOps.fit(image_data,size, Image.LANCZOS)
         image = np.asarray(image)
         image = image / 255.0
-        img_reshape = np.reshape(image, (28, 28, 1))
+        img_reshape = np.reshape(image, (1, 28, 28, 1))
         prediction = model.predict(img_reshape)
         return prediction
 
