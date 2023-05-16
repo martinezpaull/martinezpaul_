@@ -36,7 +36,7 @@ def main():
         prediction = import_and_predict(image, model)
         class_index = np.argmax(prediction)
         class_name = class_names[class_index]
-        string = "Glucose Level: " + class_name
+        string = "Classification: " + class_name
         st.success(string)
  
 if __name__ == "__main__":
